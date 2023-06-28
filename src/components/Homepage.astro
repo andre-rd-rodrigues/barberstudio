@@ -1,0 +1,19 @@
+---
+import { Image } from '@astrojs/image/components';
+import CTA from './common/CTA.astro';
+
+const IMAGE_SIZE = 500;
+---
+
+<div
+  class="relative bg-[url('src/assets/images/salon.jpg')] bg-cover bg-center bg-no-repeat h-screen flex flex-col justify-center items-center"
+>
+  <div class="absolute inset-0 bg-black/75"></div>
+  <Image src="src/assets/images/logo.png" width={IMAGE_SIZE} height={IMAGE_SIZE} alt="Barber Studio" />
+  <h1 class="hidden">Barber Studio</h1>
+  <div class="relative w-full z-1 text-center -translate-y-11">
+    <CTA />
+  </div>
+</div>
+
+<style></style>

@@ -1,63 +1,38 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
-      text: 'Landing',
+      text: 'Sobre',
       links: [
         {
-          text: 'Sass',
-          href: getPermalink('/landing/saas'),
+          text: 'Home',
+          href: '#home',
         },
         {
-          text: 'Startup',
-          href: getPermalink('/landing/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/landing/mobile-app'),
+          text: 'Equipa',
+          href: '#team',
         },
       ],
     },
     {
-      text: 'Pages',
-      links: [
-        {
-          text: 'Features',
-          href: getPermalink('/#features'),
-        },
-        {
-          text: 'Pricing',
-          href: '#',
-        },
-        {
-          text: 'About us',
-          href: '#',
-        },
-        {
-          text: 'Contact',
-          href: '#',
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
-      ],
+      text: 'Serviços',
+      href: '#serviços',
     },
     {
-      text: 'Widgets',
-      href: '#',
+      text: 'Galeria',
+      href: '#galeria',
     },
     {
-      text: 'Blog',
-      href: getBlogPermalink(),
+      text: 'Produtos',
+      href: '#produtos',
+    },
+    {
+      text: 'Contactos',
+      href: '#contactos',
     },
   ],
-  actions: [{ type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }],
+  actions: [{ type: 'button', text: 'Marcar', href: 'tel:+351962577577' }],
 };
 
 export const footerData = {
@@ -122,4 +97,8 @@ export const footerData = {
     <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
     Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
   `,
+};
+
+export const contactsData = {
+  tel: '+351962577577',
 };
