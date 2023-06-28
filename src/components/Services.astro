@@ -1,0 +1,40 @@
+---
+import ServiceCard from './common/ServiceCard.astro';
+---
+
+<div class="section">
+  <div class="w-full">
+    <h2
+      class="text-5xl font-semibold leading-tighter mb-36 font-heading dark:text-orange-200 text-center tracking-wider"
+    >
+      Serviços & Preços
+    </h2>
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 md:divide-x-[1px] divide-zinc-700">
+        <ServiceCard
+          icon="src/assets/images/icons/scissor.png"
+          title="Corte de cabelo"
+          description="Corte de cabelo simples para começares a semana com estilo."
+          price={13}
+        />
+        <ServiceCard
+          icon="src/assets/images/icons/beard.png"
+          title="Barba"
+          description="Corte de cabelo simples para começares a semana com estilo."
+          price={10}
+        />
+        <ServiceCard
+          icon="src/assets/images/icons/beard-oil.png"
+          title="barba + massagem facial"
+          description="Corte de cabelo simples para começares a semana com estilo."
+          price={18}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .section {
+  }
+</style>

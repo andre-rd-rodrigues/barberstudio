@@ -1,0 +1,19 @@
+---
+import { Image } from '@astrojs/image/components';
+
+export interface Props {
+  title: string;
+  icon: string | any;
+  description: string;
+  price: number;
+}
+
+const { title, description, icon, price } = Astro.props;
+---
+
+<div class="w-full md:px-16">
+  <Image src={icon} alt="Barber Studio - Icon" class="mx-auto opacity-40" loading="eager" width={60} height={60} />
+  <h4 class="text-lg font-bold my-5 uppercase text-center tracking-widest">{title}</h4>
+  <p class="font-serif text-lg text-justify opacity-80">{description}</p>
+  <p class="font-bold text-orange-200 text-end my-4">{price}€</p>
+</div>

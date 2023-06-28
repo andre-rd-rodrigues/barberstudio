@@ -9,30 +9,14 @@ export interface Props {
 }
 
 const { title, description, image, icon } = Astro.props;
-
-const IMAGE_SIZES = {
-  width: 250,
-  height: 550,
-  sizes: '',
-  aspectRatio: 0,
-};
 ---
 
-<div>
-  <Image
-    src={image}
-    alt={title}
-    class="w-full object-cover"
-    loading="eager"
-    height={IMAGE_SIZES.height}
-    width={IMAGE_SIZES.width}
-    aspectRatio={IMAGE_SIZES.aspectRatio}
-    sizes={IMAGE_SIZES.sizes}
-  />
-  <div>
-    <Image src={icon} alt="A landscape image" class="w-full" loading="eager" width={200} height={100} />
-    <h4>{title}</h4>
-    <p>{description}</p>
+<div class="relative w-80">
+  <Image src={image} alt={title} class="w-full object-cover" loading="eager" width={390} height={500} />
+  <div class="bg-slate-50 p-5">
+    <Image src={icon} alt="Barber Studio - Icon" class="mx-auto" loading="eager" width={40} height={40} />
+    <h4 class="text-neutral-900 text-lg font-bold mt-3 mb-5 uppercase text-center tracking-widest">{title}</h4>
+    <p class="text-neutral-900 font-serif text-justify leading-8">{description}</p>
   </div>
 </div>
 
