@@ -1,0 +1,57 @@
+---
+import { Image } from '@astrojs/image/components';
+
+const IMAGE_SIZES = {
+  width: 250,
+  height: 550,
+  sizes: '',
+  aspectRatio: 0,
+};
+---
+
+<div class="section">
+  <div class="flex gap-10">
+    <div class="flex-1 w-50 flex gap-10 justify-center">
+      <div class="max-w-[50%]">
+        <Image
+          src="src/assets/images/barber.jpg"
+          alt="A landscape image"
+          class="w-full shadow-xl"
+          loading="eager"
+          height={IMAGE_SIZES.height}
+          width={IMAGE_SIZES.width}
+          aspectRatio={IMAGE_SIZES.aspectRatio}
+          sizes={IMAGE_SIZES.sizes}
+        />
+      </div>
+      <div class="max-w-[50%]">
+        <Image
+          src="src/assets/images/beard.jpg"
+          alt="A landscape image"
+          class="w-full shadow-xl"
+          loading="eager"
+          height={IMAGE_SIZES.height}
+          width={IMAGE_SIZES.width}
+          aspectRatio={IMAGE_SIZES.aspectRatio}
+          sizes={IMAGE_SIZES.sizes}
+        />
+      </div>
+    </div>
+    <div class="flex-1">
+      <h2 class="text-4xl md:text-5xl leading-tighter mb-8 font-heading dark:text-orange-200 tracking-wider">
+        Sobre nós
+      </h2>
+      <p class="font-serif w-4/5 leading-8 text-justify">
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+        College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage.
+        Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+        Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
+        Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
+        1.10.32.
+      </p>
+    </div>
+  </div>
+</div>
+
+<style lang="scss"></style>
