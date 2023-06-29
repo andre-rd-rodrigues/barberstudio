@@ -8,7 +8,9 @@ import Services from '~/components/Services.astro';
 import Homepage from '~/components/Homepage.astro';
 import Schedule from '~/components/Schedule.astro';
 import Gallery from '~/components/Gallery.jsx';
+import Contacts from '~/components/Contacts.astro';
 import Parallax from '~/components/widgets/Parallax.astro';
+import Products from '~/components/Products.jsx';
 
 const meta = {
   title: SITE.title,
@@ -24,5 +26,9 @@ const meta = {
   <Team />
   <Schedule />
   <Services />
-  <Gallery client:load />
+  <Gallery />
+  <div class="animation">
+    <Products client:only="react" />
+  </div>
+  <Contacts />
 </Layout>

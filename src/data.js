@@ -5,11 +5,11 @@ export const headerData = {
       links: [
         {
           text: 'Home',
-          href: '#home',
+          href: '#sobre',
         },
         {
           text: 'Equipa',
-          href: '#team',
+          href: '#equipa',
         },
       ],
     },
@@ -19,7 +19,7 @@ export const headerData = {
     },
     {
       text: 'Galeria',
-      href: '#gallery',
+      href: '#galeria',
     },
     {
       text: 'Produtos',
@@ -40,35 +40,34 @@ export const footerData = {
       links: [
         {
           text: 'Conceito',
-          href: '#home',
+          href: '#sobre',
         },
         {
           text: 'Equipa',
-          href: '#team',
+          href: '#equipa',
         },
       ],
     },
     {
       title: 'Serviços',
-      href: '#serviços',
       links: [
         {
           text: 'Serviços',
-          href: '#services',
+          href: '#serviços',
         },
         {
           text: 'Preços',
-          href: '#services',
+          href: '#serviços',
         },
       ],
     },
     {
       title: 'Galeria',
-      href: '#gallery',
+      href: '#galeria',
       links: [
         {
           text: 'Portfólio',
-          href: '#home',
+          href: '#galeria',
         },
       ],
     },
@@ -78,22 +77,22 @@ export const footerData = {
       href: '#produtos',
       links: [
         {
-          text: 'Produtos em loja',
-          href: '#products',
+          text: 'Ver produtos',
+          href: '#produtos',
         },
       ],
     },
     {
       title: 'Contactos',
-      href: '#contacts',
+      href: '#contactos',
       links: [
         {
           text: '+351 966578762',
-          href: '#contacts',
+          href: 'tel:#+351966578762',
         },
         {
           text: 'reservas@barberstudio.com',
-          href: '#contacts',
+          href: 'mailto:reservas@barberstudio.com',
         },
       ],
     },

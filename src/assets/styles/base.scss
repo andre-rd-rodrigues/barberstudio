@@ -33,11 +33,12 @@
 }
 
 .section {
-  margin: 150px 0;
-  padding: 0 30px;
-  min-height: 60vh;
+  padding: 100px 30px;
   display: flex;
+  justify-content: center;
   align-items: center;
+  max-width: 1400px;
+  margin: auto;
 }
 
 #header.scroll {
@@ -46,6 +47,17 @@
 
 .dropdown:hover .dropdown-menu {
   display: block;
+}
+
+.slick-list {
+  height: 600px;
+}
+
+// responsive slick class
+@media (min-width: 1300px) {
+  .slick-list {
+    height: 700px;
+  }
 }
 
 [astro-icon].icon-light > * {

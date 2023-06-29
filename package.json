@@ -1,6 +1,6 @@
 {
-  "name": "@onwidget/astrowind",
-  "description": "A template to make your website using Astro + Tailwind CSS.",
+  "name": "Barber Studio",
+  "description": "Na Barber Studio os nossos barbeiros proporcionam um atendimento personalizado para que possas sair à rua confiante. Visita-nos em Setúbal e vem conhecer a nossa seleção de produtos em loja.",
   "version": "0.9.8",
   "private": true,
   "scripts": {
@@ -52,7 +52,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-grid-gallery": "^1.0.0",
+    "react-slick": "^0.29.0",
     "sass": "^1.63.6",
+    "slick-carousel": "^1.8.1",
     "taos": "^1.0.3",
     "yet-another-react-lightbox": "^3.11.3"
   }

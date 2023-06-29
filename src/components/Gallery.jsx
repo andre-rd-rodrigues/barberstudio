@@ -16,7 +16,7 @@ function Gallery() {
   ];
 
   return (
-    <div className="relative section">
+    <div className="relative section" id="galeria">
       <div className="w-full">
         <h2
           data-animation="fade-in"
