@@ -8,6 +8,7 @@ import Services from '~/components/Services.astro';
 import Homepage from '~/components/Homepage.astro';
 import Schedule from '~/components/Schedule.astro';
 import Gallery from '~/components/Gallery.jsx';
+import Parallax from '~/components/widgets/Parallax.astro';
 
 const meta = {
   title: SITE.title,
@@ -19,8 +20,9 @@ const meta = {
 <Layout {meta}>
   <Homepage />
   <About />
+  <Parallax src="src/assets/images/parallax-1.jpg"><div class="absolute inset-0 bg-black/40"></div></Parallax>
   <Team />
   <Schedule />
   <Services />
-  <Gallery />
+  <Gallery client:load />
 </Layout>

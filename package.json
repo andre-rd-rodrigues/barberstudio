@@ -51,7 +51,9 @@
     "aos": "^2.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-grid-gallery": "^1.0.0",
     "sass": "^1.63.6",
-    "taos": "^1.0.3"
+    "taos": "^1.0.3",
+    "yet-another-react-lightbox": "^3.11.3"
   }
 }

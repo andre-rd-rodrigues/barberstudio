@@ -1,14 +1,11 @@
 ---
 import { Image } from '@astrojs/image/components';
+import Parallax from './widgets/Parallax.astro';
 ---
 
-<div
-  class="relative bg-fixed bg-[url('src/assets/images/salon.jpg')] bg-cover bg-center bg-no-repeat h-96 flex flex-col justify-center items-center"
->
+<Parallax src="src/assets/images/salon.jpg">
   <div class="absolute inset-0 bg-black/75"></div>
-  <h2
-    class="animation text-4xl md:text-5xl leading-tighter tracking-wider font-heading text-red-800 dark:text-orange-200"
-  >
+  <h2 class="animation text-4xl md:text-5xl leading-tighter tracking-wider font-heading text-orange-200">
     Abertos ao sábado
   </h2>
   <div class="animation my-3">
@@ -20,7 +17,9 @@ import { Image } from '@astrojs/image/components';
       alt="Barber Studio"
     />
   </div>
-  <p class="animation font-serif delay-200 tracking-wider text-lg">Semana 9h - 17h30 | Sábado 9:30am - 8pm</p>
-</div>
+  <p class="animation font-serif delay-200 tracking-wider text-lg text-white">
+    Semana 9h - 17h30 | Sábado 9:30am - 8pm
+  </p>
+</Parallax>
 
 <style></style>
