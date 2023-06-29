@@ -34,6 +34,7 @@
 
 .section {
   margin: 150px 0;
+  padding: 0 30px;
   min-height: 60vh;
   display: flex;
   align-items: center;
@@ -64,4 +65,39 @@
 
 [data-aw-toggle-menu].expanded g > path:last-child {
   @apply rotate-45 translate-y-[-8px] translate-x-[14px];
+}
+
+// Animations
+.animation {
+  opacity: 0;
+}
+
+.fade-down {
+  animation: fadeDownAnimation 1s ease forwards;
+}
+
+@keyframes fadeDownAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.3s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

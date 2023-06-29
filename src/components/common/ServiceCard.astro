@@ -11,9 +11,16 @@ export interface Props {
 const { title, description, icon, price } = Astro.props;
 ---
 
-<div class="w-full md:px-16">
-  <Image src={icon} alt="Barber Studio - Icon" class="mx-auto opacity-40" loading="eager" width={60} height={60} />
+<div class="w-full pb-16 md:px-16">
+  <Image
+    src={icon}
+    alt="Barber Studio - Icon"
+    class="mx-auto opacity-50 invert dark:invert-0"
+    loading="eager"
+    width={60}
+    height={60}
+  />
   <h4 class="text-lg font-bold my-5 uppercase text-center tracking-widest">{title}</h4>
   <p class="font-serif text-lg text-justify opacity-80">{description}</p>
-  <p class="font-bold text-orange-200 text-end my-4">{price}€</p>
+  <p class="font-bold dark:text-orange-200 text-red-800 text-end my-4">{price}€</p>
 </div>

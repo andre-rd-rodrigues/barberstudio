@@ -9,11 +9,21 @@ const IMAGE_SIZE = 500;
   class="relative bg-[url('src/assets/images/salon.jpg')] bg-cover bg-center bg-no-repeat h-screen flex flex-col justify-center items-center"
 >
   <div class="absolute inset-0 bg-black/75"></div>
-  <Image src="src/assets/images/logo.png" width={IMAGE_SIZE} height={IMAGE_SIZE} alt="Barber Studio" />
+  <Image
+    src="src/assets/images/homepage-logo.png"
+    class="animation"
+    width={IMAGE_SIZE}
+    height={IMAGE_SIZE}
+    alt="Barber Studio"
+  />
   <h1 class="hidden">Barber Studio</h1>
-  <div class="relative w-full z-1 text-center -translate-y-11">
-    <CTA />
+  <div
+    data-delay={500}
+    data-animation="fade-in"
+    class="animation relative w-full z-1 text-center -translate-y-11 opacity-0"
+  >
+    <CTA dark />
   </div>
 </div>
 
-<style></style>
+<script></script>

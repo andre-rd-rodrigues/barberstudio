@@ -1,5 +1,3 @@
-import { getPermalink, getAsset } from './utils/permalinks';
-
 export const headerData = {
   links: [
     {
@@ -21,7 +19,7 @@ export const headerData = {
     },
     {
       text: 'Galeria',
-      href: '#galeria',
+      href: '#gallery',
     },
     {
       text: 'Produtos',
@@ -38,64 +36,77 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'Sobre',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        {
+          text: 'Conceito',
+          href: '#home',
+        },
+        {
+          text: 'Equipa',
+          href: '#team',
+        },
       ],
     },
     {
-      title: 'Platform',
+      title: 'Serviços',
+      href: '#serviços',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
+        {
+          text: 'Serviços',
+          href: '#services',
+        },
+        {
+          text: 'Preços',
+          href: '#services',
+        },
       ],
     },
     {
-      title: 'Support',
+      title: 'Galeria',
+      href: '#gallery',
       links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        {
+          text: 'Portfólio',
+          href: '#home',
+        },
+      ],
+    },
+
+    {
+      title: 'Produtos',
+      href: '#produtos',
+      links: [
+        {
+          text: 'Produtos em loja',
+          href: '#products',
+        },
       ],
     },
     {
-      title: 'Company',
+      title: 'Contactos',
+      href: '#contacts',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        {
+          text: '+351 966578762',
+          href: '#contacts',
+        },
+        {
+          text: 'reservas@barberstudio.com',
+          href: '#contacts',
+        },
       ],
     },
   ],
-  secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
-  ],
+
   socialLinks: [
     { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
   footNote: `
-    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
+    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(src/assets/images/brand.png)]"></span>
+    Made by <a class="hover:underline dark:text-gray-200" href="https://andrerodrigo.com/"> André Rodrigo</a> · All rights reserved.
   `,
 };
 

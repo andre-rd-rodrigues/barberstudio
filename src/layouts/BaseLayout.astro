@@ -6,6 +6,7 @@ import BasicScripts from '~/components/common/BasicScripts.astro';
 
 import { MetaSEO } from '~/types';
 import { SITE } from '~/config.mjs';
+import 'aos/dist/aos.css';
 
 export interface Props {
   meta?: MetaSEO;
@@ -19,8 +20,6 @@ const { language = 'en', textDirection = 'ltr' } = SITE;
 <html lang={language} dir={textDirection} class="2xl:text-[20px]">
   <head>
     <MetaTags {...meta} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Playfair+Display+SC:wght@700&display=swap"
       rel="stylesheet"
@@ -35,5 +34,32 @@ const { language = 'en', textDirection = 'ltr' } = SITE;
         content-visibility: auto;
       }
     </style>
+    <script>
+      const the_animation = document.querySelectorAll('.animation');
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const delayAttribute = entry.target.getAttribute('data-delay');
+              const animationAttribute = entry.target.getAttribute('data-animation');
+
+              const delay = parseInt(delayAttribute) || 0;
+
+              setTimeout(() => {
+                entry.target.classList.add(animationAttribute || 'fade-down');
+              }, delay);
+            }
+          });
+        },
+        { threshold: 0 }
+      );
+      //
+      for (let i = 0; i < the_animation.length; i++) {
+        const elements = the_animation[i];
+
+        observer.observe(elements);
+      }
+    </script>
   </body>
 </html>

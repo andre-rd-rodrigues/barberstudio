@@ -1,10 +1,20 @@
 ---
 import { contactsData } from '~/data';
+
+interface Props {
+  dark?: boolean;
+}
+
+const { dark } = Astro.props;
 ---
 
 <a
-  class="bg-transparent dark:hover:bg-white dark:hover:text-neutral-900 dark:border-white border-neutral-800 hover:text-white hover:bg-neutral-800 dark:text-white text-neutral-800 font-semibold transition ease-in-out py-3 px-8 border hover:border-transparent uppercase tracking-widest text-md"
-  href={contactsData.tel}>MARCAR</a
+  class={`bg-transparent ${
+    !dark
+      ? 'dark:hover:bg-white dark:hover:text-neutral-900 dark:border-white border-neutral-800 hover:text-white hover:bg-neutral-800 dark:text-white text-neutral-800'
+      : 'text-white border-white hover:bg-white hover:text-neutral-800'
+  } font-semibold transition ease-in-out py-3 px-8 border hover:border-transparent uppercase tracking-widest text-md`}
+  href={`tel:${contactsData.tel}`}>MARCAR</a
 >
 
 <style></style>
