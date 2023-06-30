@@ -16,7 +16,7 @@ export default defineConfig({
   site: SITE.origin,
   base: SITE.basePathname,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
-  output: 'hybrid',
+  output: 'server',
   markdown: {
     remarkPlugins: [readingTimeRemarkPlugin],
   },

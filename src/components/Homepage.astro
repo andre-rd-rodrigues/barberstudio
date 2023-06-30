@@ -1,21 +1,28 @@
 ---
-import { Image } from '@astrojs/image/components';
+import { Picture } from '@astrojs/image/components';
 import CTA from './common/CTA.astro';
 
 export const prerender = true;
-const IMAGE_SIZE = 500;
+/* const IMAGE_SIZE = 500; */
+
+/* 
+width={IMAGE_SIZE}
+    height={IMAGE_SIZE} */
 ---
 
 <div
   class="relative bg-[url('/images/salon.jpg')] bg-cover bg-center bg-no-repeat h-screen flex flex-col justify-center items-center"
 >
   <div class="absolute inset-0 bg-black/75"></div>
-  <Image
-    src="https://i.postimg.cc/brgQyCP3/homepage-logo.png"
+  <Picture
+    src={import('~/assets/images/homepage-logo.png')}
     class="animation"
-    width={IMAGE_SIZE}
-    height={IMAGE_SIZE}
-    aspectRatio="16:9"
+    widths={[400, 768, 1024, 2040]}
+    sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+    aspectRatio={'16:9'}
+    loading="eager"
+    width={600}
+    height={600}
     alt="Barber Studio"
     format="png"
   />
@@ -28,5 +35,3 @@ const IMAGE_SIZE = 500;
     <CTA dark />
   </div>
 </div>
-
-<script></script>
