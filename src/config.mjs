@@ -2,11 +2,9 @@ import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
   name: 'Barber Studio',
-
-  origin: 'https://astrowind.vercel.app',
+  origin: 'https://barberstudio-jet.vercel.app',
   basePathname: '/',
   trailingSlash: false,
-
   title: 'Barber Studio',
   description:
     'Na Barber Studio, os nossos barbeiros proporcionam um atendimento personalizado às tuas preferências. Visita-nos em Setúbal e vem também conhecer a nossa seleção de produtos em loja.',
