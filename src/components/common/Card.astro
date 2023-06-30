@@ -14,7 +14,7 @@ const { title, description, image, icon } = Astro.props;
 <div class="relative w-80 shadow-2xl">
   <Image src={image} alt={title} class="w-full object-cover" loading="eager" width={390} height={500} />
   <div class="bg-neutral-50 p-5">
-    <img src={icon} alt="Barber Studio - Icon" class="mx-auto" loading="eager" width={40} height={40} />
+    <Image src={icon} alt="Barber Studio - Icon" class="mx-auto" loading="eager" width={40} height={40} />
     <h4 class="dark:text-neutral-900 text-red-800 text-lg font-bold mt-3 mb-5 uppercase text-center tracking-widest">
       {title}
     </h4>

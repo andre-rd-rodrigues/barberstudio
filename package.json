@@ -57,7 +57,6 @@
     "react-slick": "^0.29.0",
     "sass": "^1.63.6",
     "slick-carousel": "^1.8.1",
-    "taos": "^1.0.3",
     "yet-another-react-lightbox": "^3.11.3"
   }
 }
