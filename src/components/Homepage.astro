@@ -1,7 +1,6 @@
 ---
 import { Image } from '@astrojs/image/components';
 import CTA from './common/CTA.astro';
-import logo from '../assets/images/homepage-logo.png';
 
 export const prerender = true;
 const IMAGE_SIZE = 500;
@@ -11,7 +10,14 @@ const IMAGE_SIZE = 500;
   class="relative bg-[url('/images/salon.jpg')] bg-cover bg-center bg-no-repeat h-screen flex flex-col justify-center items-center"
 >
   <div class="absolute inset-0 bg-black/75"></div>
-  <Image src={logo} class="animation" width={IMAGE_SIZE} height={IMAGE_SIZE} alt="Barber Studio" format="png" />
+  <Image
+    src={import('../assets/images/homepage-logo.png')}
+    class="animation"
+    width={IMAGE_SIZE}
+    height={IMAGE_SIZE}
+    alt="Barber Studio"
+    format="png"
+  />
   <h1 class="hidden">Barber Studio</h1>
   <div
     data-delay={500}
