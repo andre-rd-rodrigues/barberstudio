@@ -16,12 +16,6 @@ export default defineConfig({
   site: SITE.origin,
   base: SITE.basePathname,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
-  experimental: {
-    assets: true,
-  },
-  build: {
-    assetsPrefix: 'https://barberstudio-jet.vercel.app',
-  },
   output: 'hybrid',
   markdown: {
     remarkPlugins: [readingTimeRemarkPlugin],
