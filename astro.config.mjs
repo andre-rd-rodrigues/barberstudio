@@ -10,49 +10,59 @@ import compress from 'astro-compress';
 import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 import { SITE } from './src/config.mjs';
 import react from '@astrojs/react';
-import vercel from "@astrojs/vercel/serverless";
+import vercel from '@astrojs/vercel/serverless';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const whenExternalScripts = (items = []) => SITE.googleAnalyticsId ? Array.isArray(items) ? items.map(item => item()) : [items()] : [];
-
+const whenExternalScripts = (items = []) =>
+  SITE.googleAnalyticsId ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE.origin,
   base: SITE.basePathname,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
-  output: 'static',
+  output: 'hybrid',
   markdown: {
-    remarkPlugins: [readingTimeRemarkPlugin]
+    remarkPlugins: [readingTimeRemarkPlugin],
   },
-  integrations: [tailwind({
-    config: {
-      applyBaseStyles: false
-    }
-  }), sitemap(), image({
-    serviceEntryPoint: '@astrojs/image/sharp'
-  }), mdx(), ...whenExternalScripts(() => partytown({
-    config: {
-      forward: ['dataLayer.push']
-    }
-  })), compress({
-    css: true,
-    html: {
-      removeAttributeQuotes: false
-    },
-    img: false,
-    js: true,
-    svg: false,
-    logger: 1
-  }), react()],
+  integrations: [
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
+    sitemap(),
+    image({
+      serviceEntryPoint: '@astrojs/image/sharp',
+    }),
+    mdx(),
+    ...whenExternalScripts(() =>
+      partytown({
+        config: {
+          forward: ['dataLayer.push'],
+        },
+      })
+    ),
+    compress({
+      css: true,
+      html: {
+        removeAttributeQuotes: false,
+      },
+      img: false,
+      js: true,
+      svg: false,
+      logger: 1,
+    }),
+    react(),
+  ],
   vite: {
     resolve: {
       alias: {
-        '~': path.resolve(__dirname, './src')
-      }
+        '~': path.resolve(__dirname, './src'),
+      },
     },
     ssr: {
-      noExternal: ['react-slick']
-    }
+      noExternal: ['react-slick'],
+    },
   },
-  adapter: vercel()
+  adapter: vercel(),
 });
