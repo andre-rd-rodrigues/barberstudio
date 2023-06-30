@@ -2,7 +2,6 @@ import image from '@astrojs/image';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
-import vercel from '@astrojs/vercel/serverless';
 import compress from 'astro-compress';
 import { defineConfig } from 'astro/config';
 import path from 'path';
@@ -16,7 +15,7 @@ export default defineConfig({
   site: SITE.origin,
   base: SITE.basePathname,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
-  output: 'hybrid',
+  output: 'static',
   markdown: {
     remarkPlugins: [readingTimeRemarkPlugin],
   },
@@ -52,5 +51,4 @@ export default defineConfig({
       noExternal: ['react-slick'],
     },
   },
-  adapter: vercel(),
 });
