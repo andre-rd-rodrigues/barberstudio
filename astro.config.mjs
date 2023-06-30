@@ -26,7 +26,9 @@ export default defineConfig({
       },
     }),
     sitemap(),
-    image(),
+    image({
+      serviceEntryPoint: '@astrojs/image/sharp',
+    }),
     compress({
       css: true,
       html: {
