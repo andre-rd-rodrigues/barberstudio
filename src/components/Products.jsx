@@ -83,7 +83,7 @@ const Products = () => {
             backgroundImage: `url(${src})`,
           }}
         ></div>
-        <div class="bg-neutral-50 p-5 z-1 shadow-xl">
+        <div className="bg-neutral-50 p-5 z-1 shadow-xl">
           <h4 className="text-neutral-900  text-lg font-bold mt-3 mb-5 uppercase text-center tracking-widest">
             {title}
           </h4>
@@ -95,8 +95,8 @@ const Products = () => {
   };
 
   return (
-    <div class="max-w-6xl mx-auto">
-      <div id="produtos" class="mx-9">
+    <div className="max-w-6xl mx-auto">
+      <div id="produtos" className="mx-9">
         <div>
           <h2 className="text-4xl md:text-5xl leading-tighter tracking-wider my-9 md:mt-0 font-heading text-red-800 dark:text-orange-200">
             Produtos

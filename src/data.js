@@ -104,7 +104,7 @@ export const footerData = {
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
   ],
   footNote: `
-    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(src/assets/images/brand.png)]"></span>
+    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(/images/brand.png)]"></span>
     Made by <a class="hover:underline dark:text-gray-200" href="https://andrerodrigo.com/"> André Rodrigo</a> · All rights reserved.
   `,
 };

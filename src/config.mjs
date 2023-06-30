@@ -1,4 +1,4 @@
-import defaultImage from './public/images/default.png';
+import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
   name: 'Barber Studio',
@@ -9,7 +9,7 @@ const CONFIG = {
 
   title: 'Barber Studio',
   description:
-    'Na Barber Studio os nossos barbeiros proporcionam um atendimento personalizado para que possas sair à rua confiante. Visita-nos em Setúbal e vem conhecer a nossa seleção de produtos em loja.',
+    'Na Barber Studio, os nossos barbeiros proporcionam um atendimento personalizado às tuas preferências. Visita-nos em Setúbal e vem também conhecer a nossa seleção de produtos em loja.',
   defaultImage,
 
   defaultTheme: 'dark', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
