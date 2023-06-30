@@ -5,19 +5,13 @@ import Parallax from './widgets/Parallax.astro';
 export const prerender = true;
 ---
 
-<Parallax src="src/assets/images/salon.jpg">
+<Parallax src="/images/salon.jpg">
   <div class="absolute inset-0 bg-black/75"></div>
   <h2 class="animation text-4xl md:text-5xl leading-tighter tracking-wider font-heading text-orange-200">
     Abertos ao sábado
   </h2>
   <div class="animation my-3">
-    <Image
-      src="src/assets/images/icons/mustache.png"
-      class="opacity-80 invert"
-      width={60}
-      height={50}
-      alt="Barber Studio"
-    />
+    <Image src="/images/icons/mustache.png" class="opacity-80 invert" width={60} height={50} alt="Barber Studio" />
   </div>
   <p class="animation font-serif delay-200 tracking-wider text-lg text-white">
     Semana 9h - 17h30 | Sábado 9:30am - 8pm

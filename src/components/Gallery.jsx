@@ -47,7 +47,7 @@ function Gallery() {
           <div className="bg-neutral-900/90 backdrop-blur-sm h-screen w-full fixed top-0 left-0  flex items-center justify-center z-10">
             <div className="relative w-full max-w-md max-h-full">
               <button className="absolute top-0 right-0 z-10 p-3" onClick={() => setSelectedImage()}>
-                <img src="src/assets/images/icons/remove.png" width={30} />
+                <img src="/images/icons/remove.png" width={30} />
               </button>
               <img className="w-full shadow-2xl rounded-md" src={selectedImage} alt="" />
             </div>

@@ -49,17 +49,6 @@
   display: block;
 }
 
-.slick-list {
-  height: 600px;
-}
-
-// responsive slick class
-@media (min-width: 1300px) {
-  .slick-list {
-    height: 700px;
-  }
-}
-
 [astro-icon].icon-light > * {
   stroke-width: 1.2;
 }
