@@ -1,0 +1,1 @@
+{"version":3,"routes":[{"src":"/\\/404/","headers":{"Location":"/404"},"status":308},{"handle":"filesystem"},{"src":"/.*","dest":"render"}]}
