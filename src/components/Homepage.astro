@@ -10,7 +10,13 @@ const IMAGE_SIZE = 500;
   class="relative bg-[url('/images/salon.jpg')] bg-cover bg-center bg-no-repeat h-screen flex flex-col justify-center items-center"
 >
   <div class="absolute inset-0 bg-black/75"></div>
-  <Image src="/images/homepage-logo.png" class="animation" width={IMAGE_SIZE} height={IMAGE_SIZE} alt="Barber Studio" />
+  <Image
+    src={import('../../public/images/homepage-logo.png')}
+    class="animation"
+    width={IMAGE_SIZE}
+    height={IMAGE_SIZE}
+    alt="Barber Studio"
+  />
   <h1 class="hidden">Barber Studio</h1>
   <div
     data-delay={500}
