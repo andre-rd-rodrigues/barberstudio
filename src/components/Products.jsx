@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
@@ -96,7 +95,7 @@ const Products = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <div id="produtos" className="mx-9">
+      <div id="produtos" className="mx-9 mt-24">
         <div>
           <h2 className="text-4xl md:text-5xl leading-tighter tracking-wider my-9 md:mt-0 font-heading text-red-800 dark:text-orange-200">
             Produtos

@@ -1,0 +1,36 @@
+---
+const images = [
+  'https://images.unsplash.com/photo-1587909209111-5097ee578ec3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+  'https://images.unsplash.com/photo-1533245270348-821d4d5c7514?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+  'https://images.unsplash.com/photo-1553521041-d168abd31de3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80',
+  'https://images.unsplash.com/photo-1536520002442-39764a41e987?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
+  'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80',
+  'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg',
+];
+---
+
+<div class="section" id="galeria">
+  <div class="w-full">
+    <h2
+      class="mb-20 text-4xl md:text-5xl leading-tighter tracking-wider my-9 md:mt-0 font-heading text-red-800 dark:text-orange-200"
+    >
+      Galeria
+    </h2>
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+        gridGap: '30px',
+        alignItems: 'center',
+      }}
+    >
+      {
+        images.map((src) => (
+          <button class="border-0">
+            <img class="h-80 w-full shadow-2xl object-cover rounded-md" src={src} alt="" />
+          </button>
+        ))
+      }
+    </div>
+  </div>
+</div>

@@ -4,7 +4,7 @@ export const headerData = {
       text: 'Sobre',
       links: [
         {
-          text: 'Home',
+          text: 'Conceito',
           href: '#sobre',
         },
         {

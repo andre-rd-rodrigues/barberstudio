@@ -33,12 +33,28 @@
 }
 
 .section {
-  padding: 100px 30px;
+  padding: 100px 30px 0 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 1400px;
   margin: auto;
+}
+
+.parallax {
+  background-size: auto;
+  background-attachment: fixed;
+}
+
+// make section responsive
+@media (max-width: 415px) {
+  .section {
+    padding: 70px 30px 0 30px;
+  }
+
+  .parallax {
+    background-attachment: initial;
+  }
 }
 
 #header.scroll {
