@@ -1,13 +1,14 @@
 ---
 interface Props {
   src?: string;
+  className?: string;
 }
 
-const { src } = Astro.props;
+const { src, className } = Astro.props;
 ---
 
 <div
-  class={`relative bg-center bg-no-repeat h-96 flex flex-col justify-center items-center mt-24 parallax`}
+  class={`relative bg-center bg-no-repeat h-96 flex flex-col justify-center items-center mt-24 parallax ${className}`}
   style={{ backgroundImage: `url('${src}')` }}
 >
   <slot />
